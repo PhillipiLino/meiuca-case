@@ -6,6 +6,11 @@ class MeiucaTheme {
   final MeiucaThemeSpacingSize spacingSizes;
   final MeiucaThemeSpacingSquishSize spacingSquishSizes;
   final MeiucaThemeRadiusSize radiusSizes;
+
+  final MeiucaThemeFontSize fontSizes;
+  final MeiucaThemeFontFamily fontFamilies;
+  final MeiucaThemeFontWeight fontWeights;
+
   final MeiucaThemeLineHeight lineHeights;
   final MeiucaThemeBrandColor brandColors;
   final MeiucaThemeColorIntensity neutralColors;
@@ -27,6 +32,10 @@ class MeiucaTheme {
   static const String _brand = 'brand';
   static const String _neutral = 'neutral';
 
+  static const String _font = 'font';
+  static const String _family = 'family';
+  static const String _weight = 'weight';
+
   MeiucaTheme({
     required this.borderSizes,
     required this.opacityLevels,
@@ -36,6 +45,9 @@ class MeiucaTheme {
     required this.lineHeights,
     required this.brandColors,
     required this.neutralColors,
+    required this.fontSizes,
+    required this.fontFamilies,
+    required this.fontWeights,
   });
 
   MeiucaTheme.fromJSON(Map<String, dynamic> json)
@@ -49,7 +61,10 @@ class MeiucaTheme {
         lineHeights = MeiucaThemeLineHeight.fromJSON(json[_line][_height]),
         brandColors = MeiucaThemeBrandColor.fromJSON(json[_brand][_color]),
         neutralColors =
-            MeiucaThemeColorIntensity.fromJSON(json[_neutral][_color]);
+            MeiucaThemeColorIntensity.fromJSON(json[_neutral][_color]),
+        fontSizes = MeiucaThemeFontSize.fromJSON(json[_font][_size]),
+        fontFamilies = MeiucaThemeFontFamily.fromJSON(json[_font][_family]),
+        fontWeights = MeiucaThemeFontWeight.fromJSON(json[_font][_weight]);
 
   toJSON() => {
         _border: {_size: borderSizes.toJSON()},
@@ -58,6 +73,11 @@ class MeiucaTheme {
         _spacingSquish: {_size: spacingSquishSizes.toJSON()},
         _radius: {_size: radiusSizes.toJSON()},
         _line: {_height: lineHeights.toJSON()},
+        _font: {
+          _size: fontSizes.toJSON(),
+          _family: fontFamilies.toJSON(),
+          _weight: fontWeights.toJSON(),
+        },
         _brand: {_color: brandColors.toJSON()},
         _neutral: {_color: neutralColors.toJSON()},
       };
