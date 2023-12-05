@@ -239,6 +239,20 @@ const _mainThemeJson = {
           'attributes': {'category': 'size', 'type': 'spacing_squish'},
         },
       },
+      'lg': {
+        'v': {
+          'value': '40px',
+          'attributes': {'category': 'size', 'type': 'spacing_squish'},
+        },
+        'h': {
+          'value': '40px',
+          'attributes': {'category': 'size', 'type': 'spacing_squish'},
+        },
+        'stack': {
+          'value': '40px 40px',
+          'attributes': {'category': 'size', 'type': 'spacing_squish'},
+        },
+      },
     },
   },
   'radius': {
@@ -360,11 +374,11 @@ const _mainThemeJson = {
   'brand': {
     'color': {
       'primary': {
-        '1': {
+        '5': {
           'value': '#FEF0EC',
           'attributes': {'category': 'color', 'type': 'brand'},
         },
-        '2': {
+        '4': {
           'value': '#FBD1C6',
           'attributes': {'category': 'color', 'type': 'brand'},
         },
@@ -372,11 +386,11 @@ const _mainThemeJson = {
           'value': '#F04E23',
           'attributes': {'category': 'color', 'type': 'brand'},
         },
-        '4': {
+        '2': {
           'value': '#8F260A',
           'attributes': {'category': 'color', 'type': 'brand'},
         },
-        '5': {
+        '1': {
           'value': '#691C07',
           'attributes': {'category': 'color', 'type': 'brand'},
         },
@@ -385,11 +399,11 @@ const _mainThemeJson = {
   },
   'neutral': {
     'color': {
-      '1': {
+      '5': {
         'value': '#ffffff',
         'attributes': {'category': 'color', 'type': 'neutral'},
       },
-      '2': {
+      '4': {
         'value': '#E4E5E7',
         'attributes': {'category': 'color', 'type': 'neutral'},
       },
@@ -397,11 +411,11 @@ const _mainThemeJson = {
         'value': '#A6AAAF',
         'attributes': {'category': 'color', 'type': 'neutral'},
       },
-      '4': {
+      '2': {
         'value': '#70747B',
         'attributes': {'category': 'color', 'type': 'neutral'},
       },
-      '5': {
+      '1': {
         'value': '#000000',
         'attributes': {'category': 'color', 'type': 'neutral'},
       },

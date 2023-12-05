@@ -8,6 +8,7 @@ class MeiucaThemeSpacingSquishSize {
   final EdgeInsets nano;
   final EdgeInsets xs;
   final EdgeInsets sm;
+  final EdgeInsets lg;
 
   static const String _stack = 'stack';
   static const String _vertical = 'v';
@@ -17,25 +18,29 @@ class MeiucaThemeSpacingSquishSize {
   static const String _nano = 'nano';
   static const String _xs = 'xs';
   static const String _sm = 'sm';
+  static const String _lg = 'lg';
 
   MeiucaThemeSpacingSquishSize({
     required this.quarck,
     required this.nano,
     required this.xs,
     required this.sm,
+    required this.lg,
   });
 
   MeiucaThemeSpacingSquishSize.fromJSON(Map<String, dynamic> json)
       : quarck = _getValueInEdgeInsets(json[_quarck]),
         nano = _getValueInEdgeInsets(json[_nano]),
         xs = _getValueInEdgeInsets(json[_xs]),
-        sm = _getValueInEdgeInsets(json[_sm]);
+        sm = _getValueInEdgeInsets(json[_sm]),
+        lg = _getValueInEdgeInsets(json[_lg]);
 
   Map<String, dynamic> toJSON() => {
         _quarck: _createPropertyData(quarck),
         _nano: _createPropertyData(nano),
         _xs: _createPropertyData(xs),
         _sm: _createPropertyData(sm),
+        _lg: _createPropertyData(lg),
       };
 
   static EdgeInsets _getValueInEdgeInsets(Map<String, dynamic> json) {

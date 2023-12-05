@@ -1,6 +1,7 @@
 import '../../meiuca_components.dart';
 
 class MeiucaTheme {
+  final package = 'meiuca_components';
   final MeiucaThemeBorderSize borderSizes;
   final MeiucaThemeOpacityLevel opacityLevels;
   final MeiucaThemeSpacingSize spacingSizes;
