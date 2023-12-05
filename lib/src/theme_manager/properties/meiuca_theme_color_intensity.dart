@@ -47,7 +47,7 @@ class MeiucaThemeColorIntensity {
 
   static MeiucaThemePropertyData _createPropertyData(Color value) {
     final property = MeiucaThemePropertyData(
-      value: '${value}px',
+      value: value.toHex(showAlpha: false),
       attributes: MeiucaThemePropertyDataAttributes(
         category: 'color',
         type: 'brand',

@@ -1,11 +1,4 @@
-import 'properties/meiuca_theme_border_size.dart';
-import 'properties/meiuca_theme_brand_color.dart';
-import 'properties/meiuca_theme_color_intensity.dart';
-import 'properties/meiuca_theme_line_height.dart';
-import 'properties/meiuca_theme_opacity_level.dart';
-import 'properties/meiuca_theme_radius_size.dart';
-import 'properties/meiuca_theme_spacing_size.dart';
-import 'properties/meiuca_theme_spacing_squish_size.dart';
+import '../../meiuca_components.dart';
 
 class MeiucaTheme {
   final MeiucaThemeBorderSize borderSizes;

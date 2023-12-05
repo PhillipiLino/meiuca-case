@@ -39,8 +39,9 @@ class MeiucaThemeLineHeight {
   }
 
   static MeiucaThemePropertyData _createPropertyData(double value) {
+    final intValue = (value * 100).toInt();
     final property = MeiucaThemePropertyData(
-      value: '${value}px',
+      value: '$intValue%',
       attributes: MeiucaThemePropertyDataAttributes(
         category: 'height',
         type: 'line',

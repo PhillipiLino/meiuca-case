@@ -48,11 +48,9 @@ class MeiucaThemeSpacingSquishSize {
     return EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical);
   }
 
-  static Map<String, MeiucaThemePropertyData> _createPropertyData(
-    EdgeInsets value,
-  ) {
-    final vertical = value.vertical;
-    final horizontal = value.vertical;
+  static Map<String, dynamic> _createPropertyData(EdgeInsets value) {
+    final vertical = value.top;
+    final horizontal = value.left;
 
     final propertyV = MeiucaThemePropertyData(
       value: '${vertical}px',
