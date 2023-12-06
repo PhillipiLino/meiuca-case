@@ -21,7 +21,7 @@ class MeiucaPrimaryButton extends StatelessWidget {
         padding: const MaterialStatePropertyAll(EdgeInsets.zero),
         shape: MaterialStatePropertyAll(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(meiucaRadiusSizes.none.x),
+            borderRadius: meiucaRadiusSizes.none.toCircularBorderRadius(),
           ),
         ),
         backgroundColor: MaterialStateProperty.resolveWith<Color>(

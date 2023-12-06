@@ -20,9 +20,7 @@ class MeiucaShape extends StatelessWidget {
           color: meiucaNeutralColors.four,
           width: meiucaBorderSizes.thin,
         ),
-        borderRadius: BorderRadius.all(
-          meiucaRadiusSizes.none,
-        ),
+        borderRadius: BorderRadius.all(meiucaRadiusSizes.none),
       ),
       child: child,
     );

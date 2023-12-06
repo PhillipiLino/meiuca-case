@@ -17,7 +17,7 @@ class ColorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.maxFinite,
-      padding: const EdgeInsets.all(16),
+      padding: meiucaSpacingSquishSizes.xs,
       color: color,
       child: Text(
         name,

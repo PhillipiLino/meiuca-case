@@ -10,8 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  widgetbook_annotation: ^3.0.0
-  widgetbook: ^3.0.0
+  storybook_flutter: ^0.14.0
   meiuca_components:
     path: ../
 
@@ -19,8 +18,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  widgetbook_generator: ^3.0.0
-  build_runner:
 
 flutter:
   uses-material-design: true

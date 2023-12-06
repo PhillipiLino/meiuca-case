@@ -1,57 +1,29 @@
-import 'package:example/pages/colors_page.dart';
-import 'package:example/pages/typography_page.dart';
+import 'package:example/stories/colors_story.dart';
+import 'package:example/stories/meiuca_card_content_story.dart';
+import 'package:example/stories/text_styles_story.dart';
 import 'package:flutter/material.dart';
-import 'package:widgetbook/widgetbook.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
+import 'package:storybook_flutter/storybook_flutter.dart';
 
-import 'main.directories.g.dart';
+import 'stories/meiuca_primary_button_story.dart';
+import 'stories/meiuca_shape_story.dart';
 
-void main() => runApp(const WidgetbookApp());
+void main() => runApp(const MyApp());
 
-@widgetbook.App()
-class WidgetbookApp extends StatelessWidget {
-  const WidgetbookApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  static const componentsStoryName = 'Components';
+
   @override
-  Widget build(BuildContext context) {
-    return Widgetbook.material(
-      directories: [
-        ...directories,
-        WidgetbookLeafComponent(
-          name: 'Colors',
-          useCase: WidgetbookUseCase.child(
-            name: 'Colors',
-            child: const ColorsPage(),
-          ),
-        ),
-        WidgetbookLeafComponent(
-          name: 'TextStyles',
-          useCase: WidgetbookUseCase.child(
-            name: 'TextStyles',
-            child: const TypographyPage(),
-          ),
-        ),
-      ],
-      addons: [
-        MaterialThemeAddon(
-          themes: [
-            WidgetbookTheme(
-              name: 'Light',
-              data: ThemeData.light(),
-            ),
-            WidgetbookTheme(
-              name: 'Dark',
-              data: ThemeData.dark(),
-            ),
-          ],
-        ),
-        DeviceFrameAddon(
-          devices: [
-            Devices.ios.iPhoneSE,
-            Devices.ios.iPhone13,
-            Devices.android.mediumPhone,
-          ],
-        ),
-      ],
-    );
-  }
+  Widget build(BuildContext context) => Storybook(
+        initialStory:
+            '$componentsStoryName/${MeiucaPrimaryButtonStory.storyName}',
+        stories: [
+          MeiucaPrimaryButtonStory(parentPath: componentsStoryName),
+          MeiucaShapeStory(parentPath: componentsStoryName),
+          MeiucaCardContentStory(parentPath: componentsStoryName),
+          ColorsStory(),
+          TextStylesStory(),
+        ],
+      );
 }

@@ -2,6 +2,7 @@ export 'src/components/meiuca_card_content.dart';
 export 'src/components/meiuca_primary_button.dart';
 export 'src/components/meiuca_shape.dart';
 export 'src/extensions/context_extensions.dart';
+export 'src/extensions/radius_extensions.dart';
 export 'src/meiuca_text_styles.dart';
 export 'src/theme_manager/meiuca_theme.dart';
 export 'src/theme_manager/meiuca_theme_manager.dart';
