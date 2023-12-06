@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../meiuca_components.dart';
-import '../theme_manager/utils.dart';
 
 class MeiucaShape extends StatelessWidget {
   final Widget child;
