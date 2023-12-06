@@ -1,0 +1,32 @@
+name: Flutter Web to Github Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build Web
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Configure git
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git config --global url."https://${TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+      
+      - name: Build example
+        run: |
+          cd example/
+          flutter config --enable-web
+          flutter pub get
+          flutter build web --release --base-href="/meiuca-case/"
+
+      - name: Publish generated content to GitHub Pages
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        with:
+          dir: example/build/web
+          branch: gh-pages
+          token: ${{ secrets.ACCESS_TOKEN }}
